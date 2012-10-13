@@ -4,13 +4,463 @@
 <array>
 	<dict>
 		<key>name</key>
-		<string></string>
+			<string>Singapore Sling</string>
 		<key>glass</key>
-		<string></string>
+			<string>Highball glass</string>
 		<key>image</key>
-		<string></string>
+			<string>SingaporeSling.png</string>
 		<key>ingredients</key>
-		<array/>
+			<array>
+				<string>Gin</string>
+				<string>Brandy</string>
+				<string>Orange Liqueur</string>
+				<string>Bitters</string>
+				<string>Lemon Juice</string>
+				<string>Grenadine</string>
+				<string>Pineapple Juice</string>
+				<string>an Orange garnish</string>
+				<string>a Cherry garnish</string>
+			</array>
 	</dict>
+	<dict>
+		<key>name</key>
+			<string>Bloody Mary</string>
+		<key>glass</key>
+			<string>Highball glass</string>
+		<key>image</key>
+			<string>BloodyMary.png</string>
+		<key>ingredients</key>
+			<array>
+				<string>Vodka</string>
+				<string>Lemon Juice</string>
+				<string>Tomato Juice</string>
+				<string>Worcesterchire Sauce</string>
+				<string>Tabasco Sauce</string>
+				<string>Salt</string>
+				<string>Pepper</string>
+				<string>a Celery garnish</string>
+			</array>
+	</dict>			
+	<dict>
+		<key>name</key>
+			<string>Sex on the Beach</string>
+		<key>glass</key>
+			<string>Highball glass</string>
+		<key>image</key>
+			<string>SexontheBeach.png</string>
+		<key>ingredients</key>
+			<array>
+				<string>Vodka</string>
+				<string>Peach Liqueur</string>
+				<string>Orange Juice</string>
+				<string>Cranberry Juice</string>
+				<string>an Orange garnish</string>
+				<string>a Cherry garnish</string>
+			</array>
+	</dict>									
+	<dict>
+		<key>name</key>
+			<string>Mojito</string>
+		<key>glass</key>
+			<string>Highball glass</string>
+		<key>image</key>
+			<string>Mojito.png</string>
+		<key>ingredients</key>
+			<array>
+				<string>Rum</string>
+				<string>Lime Juice</string>
+				<string>Syrup</string>
+				<string>a Lime garnish</string>
+				<string>Soda Water</string>
+				<string>a Mint garnish</string>
+			</array>
+	</dict>									
+	<dict>
+		<key>name</key>
+			<string>Mai Tai</string>
+		<key>glass</key>
+			<string>Highball glass</string>
+		<key>image</key>
+			<string>MaiTai.png</string>
+		<key>ingredients</key>
+			<array>
+				<string>Rum</string>
+				<string>Orange Liqueur</string>
+				<string>Lime Juice</string>
+				<string>Syrup</string>
+				<string>a Lemon garnish</string>
+				<string>a Pineapple garnish</string>
+			</array>
+	</dict>									
+	<dict>
+		<key>name</key>
+			<string>Sea Breeze</string>
+		<key>glass</key>
+			<string>Highball glass</string>
+		<key>image</key>
+			<string>SeaBreeze.png</string>
+		<key>ingredients</key>
+			<array>
+				<string>Vodka</string>
+				<string>Grapefruit Juice</string>
+				<string>Cranberry Juice</string>
+				<string>a Lime garnish</string>
+				<string>a Cherry garnish</string>
+			</array>
+	</dict>												
+	<dict>
+		<key>name</key>
+			<string>Pina Colada</string>
+		<key>glass</key>
+			<string>Highball glass</string>
+		<key>image</key>
+			<string>PinaColada.png</string>
+		<key>ingredients</key>
+			<array>
+				<string>Rum</string>
+				<string>Creme de Coconut</string>
+				<string>Pineapple Juice</string>
+				<string>a Pineapple garnish</string>
+				<string>a Cherry garnish</string>
+			</array>
+	</dict>												
+	<dict>
+		<key>name</key>
+			<string>Harvey Wallbanger</string>
+		<key>glass</key>
+			<string>Highball glass</string>
+		<key>image</key>
+			<string>HarveyWallbanger.png</string>
+		<key>ingredients</key>
+			<array>
+				<string>Vodka</string>
+				<string>Herbal Liqueur</string>
+				<string>Orange Juice</string>
+				<string>an Orange garnish</string>
+				<string>a Cherry garnish</string>
+			</array>
+	</dict>												
+	<dict>
+		<key>name</key>
+			<string>Bronx</string>
+		<key>glass</key>
+			<string>Cocktail glass</string>
+		<key>image</key>
+			<string>Bronx.png</string>
+		<key>ingredients</key>
+			<array>
+				<string>Gin</string>
+				<string>Sweet Vermouth</string>
+				<string>Dry Vermouth</string>
+				<string>Orange Juice</string>
+				<string>a Cherry garnish</string>
+			</array>
+	</dict>												
+	<dict>
+		<key>name</key>
+			<string>Cosmopolitan</string>
+		<key>glass</key>
+			<string>Cocktail glass</string>
+		<key>image</key>
+			<string>Cosmopolitan.png</string>
+		<key>ingredients</key>
+			<array>
+				<string>Vodka</string>
+				<string>Orange Liqueur</string>
+				<string>Lime Juice</string>
+				<string>Cranberry Juice</string>
+				<string>Lemon garnish</string>
+			</array>
+	</dict>												
+	<dict>
+		<key>name</key>
+			<string>John Collins</string>
+		<key>glass</key>
+			<string>Highball glass</string>
+		<key>image</key>
+			<string>JohnCollins.png</string>
+		<key>ingredients</key>
+			<array>
+				<string>Whiskey</string>
+				<string>Bitters</string>
+				<string>Lemon Juice</string>
+				<string>Syrup</string>
+				<string>Soda Water</string>
+			</array>
+	</dict>												
+	<dict>
+		<key>name</key>
+			<string>Manhattan</string>
+		<key>glass</key>
+			<string>Cocktail glass</string>
+		<key>image</key>
+			<string>Manhattan.png</string>
+		<key>ingredients</key>
+			<array>
+				<string>Whiskey</string>
+				<string>Sweet Vermouth</string>
+				<string>Bitters</string>
+				<string>a Cherry garnish</string>
+			</array>
+	</dict>															
+	<dict>
+		<key>name</key>
+			<string>Salty Dog</string>
+		<key>glass</key>
+			<string>Highball glass</string>
+		<key>image</key>
+			<string>SaltyDog.png</string>
+		<key>ingredients</key>
+			<array>
+				<string>Vodka</string>
+				<string>Grapefruit Juice</string>
+				<string>a Salt garnish</string>
+				<string>a Grapefruit garnish</string>
+			</array>
+	</dict>															
+	<dict>
+		<key>name</key>
+			<string>Golden Cadillac</string>
+		<key>glass</key>
+			<string>Cocktail glass</string>
+		<key>image</key>
+			<string>GoldenCadillac.png</string>
+		<key>Ingredients</key>
+			<array>
+				<string>Creme de Cacao White</string>
+				<string>Herbal Liqueur</string>
+				<string>Cream</string>
+				<string>a Mint garnish</string>
+			</array>
+	</dict>															
+	<dict>
+		<key>name</key>
+			<string>Paradise</string>
+		<key>glass</key>
+			<string>Cocktail glass</string>
+		<key>image</key>
+			<string>Paradise.png</string>
+		<key>ingredients</key>
+			<array>
+				<string>Gin</string>
+				<string>Brandy</string>
+				<string>Orange Juice</string>
+				<string>a Mint garnish</string>
+			</array>
+	</dict>															
+	<dict>
+		<key>name</key>
+			<string>Apple Martini</string>
+		<key>glass</key>
+			<string>Cocktail glass</string>
+		<key>image</key>
+			<string>AppleMartini.png</string>
+		<key>ingredients</key>
+			<array>
+				<string>Vodka</string>
+				<string>Orange Liqueur</string>
+				<string>Apple Liqueur</string>
+				<string>an Apple garnish</string>
+			</array>
+	</dict>															
+	<dict>
+		<key>name</key>
+			<string>Negroni</string>
+		<key>glass</key>
+			<string>Old-Fashioned glass</string>
+		<key>image</key>
+			<string>Negroni.png</string>
+		<key>ingredients</key>
+			<array>
+				<string>Gin</string>
+				<string>Sweet Vermouth</string>
+				<string>Bitters</string>
+				<string>an Orange garnish</string>
+			</array>
+	</dict>															
+	<dict>
+		<key>name</key>
+			<string>Irish Coffee</string>
+		<key>glass</key>
+			<string>Irish Coffee glass</string>
+		<key>image</key>
+			<string>IrishCoffee.png</string>
+		<key>ingredients</key>
+			<array>
+				<string>Whiskey</string>
+				<string>Cream</string>
+				<string>Coffee</string>
+				<string>Brown Sugar</string>
+			</array>
+	</dict>															
+	<dict>
+		<key>name</key>
+			<string>Old Fashioned</string>
+		<key>glass</key>
+			<string>Old-Fashioned glass</string>
+		<key>image</key>
+			<string>OldFashioned.png</string>
+		<key>ingredients</key>
+			<array>
+				<string>Whiskey</string>
+				<string>Bitters</string>
+				<string>Sugar Cubes</string>
+				<string>Soda Water</string>
+			</array>
+	</dict>															
+	<dict>
+		<key>name</key>
+			<string>Martini</string>
+		<key>glass</key>
+			<string>Cocktail glass</string>
+		<key>image</key>
+			<string>Martini.png</string>
+		<key>ingredients</key>
+			<array>
+				<string>Gin</string>
+				<string>Dry Vermouth</string>
+				<string>an Olive garnish</string>
+			</array>
+	</dict>																		
+	<dict>
+		<key>name</key>
+			<string>Gibson</string>
+		<key>glass</key>
+			<string>Cocktail glass</string>
+		<key>image</key>
+			<string>Gibson.png</string>
+		<key>ingredients</key>
+			<array>
+				<string>Gin</string>
+				<string>Dry Vermouth</string>
+				<string>an Onion garnish</string>
+			</array>
+	</dict>																		
+	<dict>
+		<key>name</key>
+			<string>Screw Driver</string>
+		<key>glass</key>
+			<string>Highball glass</string>
+		<key>image</key>
+			<string>ScrewDriver.png</string>
+		<key>ingredients</key>
+			<array>
+				<string>Vodka</string>
+				<string>Orange Juice</string>
+				<string>an Orange garnish</string>
+			</array>
+	</dict>																		
+	<dict>
+		<key>name</key>
+			<string>Caipirinha</string>
+		<key>glass</key>
+			<string>Old-Fashioned glass</string>
+		<key>image</key>
+			<string>Caipirinha.png</string>
+		<key>ingredients</key>
+			<array>
+				<string>Rum</string>
+				<string>a Lime garnish</string>
+				<string>Brown Sugar</string>
+			</array>
+	</dict>																		
+	<dict>
+		<key>name</key>
+			<string>Cuba Libre</string>
+		<key>glass</key>
+			<string>Highball glass</string>
+		<key>image</key>
+			<string>CubaLibre.png</string>
+		<key>ingredients</key>
+			<array>
+				<string>Rum</string>
+				<string>a Lime garnish</string>
+				<string>Cola</string>
+			</array>
+	</dict>																		
+	<dict>
+		<key>name</key>
+			<string>Grasshopper</string>
+		<key>glass</key>
+			<string>Cocktail glass</string>
+		<key>image</key>
+			<string>Grasshopper.png</string>
+		<key>ingredients</key>
+			<array>
+				<string>Creme de Cacao White</string>
+				<string>Creme de Menthe</string>
+				<string>Cream</string>
+			</array>
+	</dict>																		
+	<dict>
+		<key>name</key>
+			<string>White Russian</string>
+		<key>glass</key>
+			<string>Old-Fashioned glass</string>
+		<key>image</key>
+			<string>WhiteRussian.png</string>
+		<key>ingredients</key>
+			<array>
+				<string>Vodka</string>
+				<string>Coffee Liqueur</string>
+				<string>Cream</string>
+			</array>
+	</dict>																		
+	<dict>
+		<key>name</key>
+			<string>Planters Punch</string>
+		<key>glass</key>
+			<string>Highball glass</string>
+		<key>image</key>
+			<string>PlantersPunch.png</string>
+		<key>ingredients</key>
+			<array>
+				<string>Rum</string>
+				<string>Lemon Juice</string>
+				<string>Grenadine</string>
+			</array>
+	</dict>																		
+	<dict>
+		<key>name</key>
+			<string>French Connection</string>
+		<key>glass</key>
+			<string>Old-Fashioned glass</string>
+		<key>image</key>
+			<string>FrenchConnection.png</string>
+		<key>ingredients</key>
+			<array>
+				<string>Brandy</string>
+				<string>Amaretto</string>
+		</array>
+	</dict>																					
+	<dict>
+		<key>name</key>
+			<string>Black Russian</string>
+		<key>glass</key>
+			<string>Old-Fashioned glass</string>
+		<key>image</key>
+			<string>BlackRussian.png</string>
+		<key>ingredients</key>
+			<array>
+				<string>Vodka</string>
+				<string>Coffee Liqueur</string>
+			</array>
+	</dict>	
+	<dict>
+		<key>name</key>
+			<string>Americano</string>
+		<key>glass</key>
+			<string>Highball glass</string>
+		<key>image</key>
+			<string>Americano.png</string>
+		<key>ingredients</key>
+			<array>
+				<string>Bitters</string>
+				<string>Sweet Vermouth</string>
+				<string>Soda Water</string>
+				<string>a Lemon garnish</string>
+				<string>an Orange garnish</string>
+			</array>
+	</dict>	
 </array>
 </plist>
