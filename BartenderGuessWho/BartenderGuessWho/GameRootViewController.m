@@ -40,7 +40,7 @@
 }
 
 - (void)viewDidAppear:(BOOL)animated {
-    [self viewDidAppear:animated];
+    [super viewDidAppear:animated];
     
     self.drinks = [[[DrinkModel allDrinks] allValues] mutableCopy];
     
@@ -83,6 +83,9 @@
 #pragma mark - DrinkGridViewDelegate methods
 
 - (void)gridView:(DrinkGridView *)gridView didSelectDrink:(DrinkModel *)drink {
+    
+}
+- (void)gridView:(DrinkGridView *)gridView didDeselectDrink:(DrinkModel *)drink {
     
 }
 

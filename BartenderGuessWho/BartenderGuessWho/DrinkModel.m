@@ -14,10 +14,19 @@
     static NSMutableDictionary *_allDrinks = nil;
     if(!_allDrinks) {
         NSString *plistPath = [[NSBundle mainBundle] pathForResource:@"drinks" ofType:@"plist"];
-        NSDictionary *fileDictionary = [[NSDictionary alloc] initWithContentsOfFile:plistPath];
+        NSArray *fileArray = [[NSArray alloc] initWithContentsOfFile:plistPath];
         
-        NSLog(@"%@", fileDictionary);
-        
+        _allDrinks = [[NSMutableDictionary alloc] initWithCapacity:30];
+        for(NSDictionary *dictionary in fileArray) {
+            DrinkModel *drinkModel = [[DrinkModel alloc] init];
+            
+            drinkModel.name = [dictionary objectForKey:@"name"];
+            drinkModel.glass = [dictionary objectForKey:@"glass"];
+            drinkModel.imageName = [dictionary objectForKey:@"image"];
+            drinkModel.ingredients = [dictionary objectForKey:@"ingredients"];
+            
+            [_allDrinks setObject:drinkModel forKey:drinkModel.name];
+        }
     }
     return _allDrinks;
 }

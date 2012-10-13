@@ -33,5 +33,6 @@ typedef enum {
 @protocol DrinkGridViewDelegate <NSObject>
 
 - (void)gridView:(DrinkGridView *)gridView didSelectDrink:(DrinkModel *)drink;
+- (void)gridView:(DrinkGridView *)gridView didDeselectDrink:(DrinkModel *)drink;
 
 @end

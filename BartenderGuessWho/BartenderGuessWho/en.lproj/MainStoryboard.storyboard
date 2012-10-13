@@ -39,7 +39,7 @@
                                 </state>
                                 <connections>
                                     <action selector="playGameButtonClicked:" destination="3Ek-Hl-3be" eventType="touchUpInside" id="vRU-qG-uMt"/>
-                                    <segue destination="KWw-eA-z2c" kind="modal" modalPresentationStyle="pageSheet" id="Lsv-4i-Ygh"/>
+                                    <segue destination="KWw-eA-z2c" kind="modal" identifier="DrinkSelectionViewController" modalPresentationStyle="pageSheet" id="Lsv-4i-Ygh"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -112,7 +112,7 @@
                                             <constraint firstAttribute="height" constant="613" id="dFN-tH-dsV"/>
                                         </constraints>
                                         <prototypes>
-                                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" rowHeight="96" id="5Jy-Mp-bBS">
+                                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" reuseIdentifier="GameMoveTableViewCell" rowHeight="96" id="5Jy-Mp-bBS">
                                                 <rect key="frame" x="0.0" y="22" width="325" height="96"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -200,11 +200,13 @@
                                 <color key="backgroundColor" red="0.42295206460000001" green="0.52441182070000003" blue="0.68958431480000004" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vne-hv-Bf7">
+                                <color key="backgroundColor" red="1" green="0.94174692209999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="KgX-4l-cL2"/>
                                 </constraints>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fkv-ob-o3A">
+                                <color key="backgroundColor" red="1" green="0.94174692209999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="IhQ-p4-rSi"/>
                                 </constraints>
@@ -286,6 +288,9 @@
         </scene>
     </scenes>
     <classes>
+        <class className="DrinkGridView" superclassName="UIView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/DrinkGridView.h"/>
+        </class>
         <class className="DrinkSelectionViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/DrinkSelectionViewController.h"/>
             <relationships>
@@ -298,6 +303,7 @@
                 <relationship kind="action" name="askQuestionButtonClicked:"/>
                 <relationship kind="outlet" name="askQuestionButton" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="drinkGridContainer" candidateClass="UIView"/>
+                <relationship kind="outlet" name="drinkGridView" candidateClass="DrinkGridView"/>
                 <relationship kind="outlet" name="movesTableView" candidateClass="UITableView"/>
                 <relationship kind="outlet" name="myCocktailImageView" candidateClass="UIImageView"/>
                 <relationship kind="outlet" name="otherCocktailImageView" candidateClass="UIImageView"/>

@@ -39,6 +39,8 @@
 		E6A1E63E1629D1FE005A3FDD /* MoveModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E6A1E63D1629D1FE005A3FDD /* MoveModel.m */; };
 		E6A1E6411629E49A005A3FDD /* DrinkGridView.m in Sources */ = {isa = PBXBuildFile; fileRef = E6A1E6401629E49A005A3FDD /* DrinkGridView.m */; };
 		E6A1E6441629E93B005A3FDD /* GameMoveTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E6A1E6431629E93B005A3FDD /* GameMoveTableViewCell.m */; };
+		E6A1E6471629F1A7005A3FDD /* DrinkGridNodeView.m in Sources */ = {isa = PBXBuildFile; fileRef = E6A1E6461629F1A7005A3FDD /* DrinkGridNodeView.m */; };
+		E6A1E6491629F348005A3FDD /* zombie-cocktail-78-small.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = E6A1E6481629F348005A3FDD /* zombie-cocktail-78-small.jpeg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -86,6 +88,9 @@
 		E6A1E6401629E49A005A3FDD /* DrinkGridView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrinkGridView.m; sourceTree = "<group>"; };
 		E6A1E6421629E93B005A3FDD /* GameMoveTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameMoveTableViewCell.h; sourceTree = "<group>"; };
 		E6A1E6431629E93B005A3FDD /* GameMoveTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameMoveTableViewCell.m; sourceTree = "<group>"; };
+		E6A1E6451629F1A7005A3FDD /* DrinkGridNodeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrinkGridNodeView.h; sourceTree = "<group>"; };
+		E6A1E6461629F1A7005A3FDD /* DrinkGridNodeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrinkGridNodeView.m; sourceTree = "<group>"; };
+		E6A1E6481629F348005A3FDD /* zombie-cocktail-78-small.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "zombie-cocktail-78-small.jpeg"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,6 +175,8 @@
 				E6A1E6431629E93B005A3FDD /* GameMoveTableViewCell.m */,
 				E6A1E63F1629E49A005A3FDD /* DrinkGridView.h */,
 				E6A1E6401629E49A005A3FDD /* DrinkGridView.m */,
+				E6A1E6451629F1A7005A3FDD /* DrinkGridNodeView.h */,
+				E6A1E6461629F1A7005A3FDD /* DrinkGridNodeView.m */,
 				E6A1E6111629BAA4005A3FDD /* Model */,
 				E6A1E5F01629A740005A3FDD /* Supporting Files */,
 			);
@@ -209,6 +216,7 @@
 		E6A1E61B1629C4E1005A3FDD /* DrinkImages */ = {
 			isa = PBXGroup;
 			children = (
+				E6A1E6481629F348005A3FDD /* zombie-cocktail-78-small.jpeg */,
 			);
 			name = DrinkImages;
 			path = Images/DrinkImages;
@@ -271,6 +279,7 @@
 				E6A1E6001629A740005A3FDD /* Default-568h@2x.png in Resources */,
 				E6A1E6031629A740005A3FDD /* MainStoryboard.storyboard in Resources */,
 				E6A1E61D1629C5E1005A3FDD /* drinks.plist in Resources */,
+				E6A1E6491629F348005A3FDD /* zombie-cocktail-78-small.jpeg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,6 +300,7 @@
 				E6A1E63E1629D1FE005A3FDD /* MoveModel.m in Sources */,
 				E6A1E6411629E49A005A3FDD /* DrinkGridView.m in Sources */,
 				E6A1E6441629E93B005A3FDD /* GameMoveTableViewCell.m in Sources */,
+				E6A1E6471629F1A7005A3FDD /* DrinkGridNodeView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

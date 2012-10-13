@@ -7,6 +7,7 @@
 //
 
 #import "HomeViewController.h"
+#import "DrinkSelectionViewController.h"
 #import "GameRootViewController.h"
 
 @interface HomeViewController ()
@@ -53,9 +54,18 @@
     
 }
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if([segue.identifier isEqual:@"DrinkSelectionViewController"]) {
+        DrinkSelectionViewController *vc = segue.destinationViewController;
+        vc.delegate = self;
+    }
+}
+
 #pragma mark - DrinkSelectionViewControllerDelegate methods
 
 - (void)viewController:(DrinkSelectionViewController *)viewController didSelectDrink:(DrinkModel *)drink {
+    [self dismissViewControllerAnimated:YES completion:nil];
+    
     GameRootViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"GameRootViewController"];
     //TODO: setup game
     [self.navigationController pushViewController:vc animated:YES];

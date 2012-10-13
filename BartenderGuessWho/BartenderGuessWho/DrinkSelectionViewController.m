@@ -51,7 +51,9 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
     }
     
-    //TODO: configure cell
+    DrinkModel *drink = [self.drinks objectAtIndex:indexPath.row];
+    cell.imageView.image = [UIImage imageNamed:drink.imageName];
+    cell.textLabel.text = drink.name;
     
     return cell;
 }
