@@ -8,6 +8,16 @@
 
 #import <Foundation/Foundation.h>
 
-@interface GameModel : NSObject
+@interface GameModel : NSObject<KCSPersistable>
+
+@property (strong, nonatomic) NSString *objectId;
+@property (strong, nonatomic) NSString *player1;
+@property (strong, nonatomic) NSString *player2;
+@property (strong, nonatomic) NSString *cocktail1;
+@property (strong, nonatomic) NSString *cocktail2;
+@property (strong, nonatomic) NSString *winner;
+
+@property (readonly, nonatomic) BOOL isPlayer1;
+@property (readonly, nonatomic) BOOL isGameCompleted;
 
 @end
