@@ -17,7 +17,11 @@
 		E6A1E5FE1629A740005A3FDD /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E6A1E5FD1629A740005A3FDD /* Default@2x.png */; };
 		E6A1E6001629A740005A3FDD /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E6A1E5FF1629A740005A3FDD /* Default-568h@2x.png */; };
 		E6A1E6031629A740005A3FDD /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E6A1E6011629A740005A3FDD /* MainStoryboard.storyboard */; };
-		E6A1E6061629A740005A3FDD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6A1E6051629A740005A3FDD /* ViewController.m */; };
+		E6A1E60D1629B8BD005A3FDD /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6A1E60C1629B8BD005A3FDD /* HomeViewController.m */; };
+		E6A1E6101629BA38005A3FDD /* DrinkSelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6A1E60F1629BA38005A3FDD /* DrinkSelectionViewController.m */; };
+		E6A1E6141629BD2C005A3FDD /* GameRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6A1E6131629BD2C005A3FDD /* GameRootViewController.m */; };
+		E6A1E6171629BE48005A3FDD /* GameModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E6A1E6161629BE48005A3FDD /* GameModel.m */; };
+		E6A1E61A1629BE65005A3FDD /* DrinkModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E6A1E6191629BE65005A3FDD /* DrinkModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,8 +39,16 @@
 		E6A1E5FD1629A740005A3FDD /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		E6A1E5FF1629A740005A3FDD /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		E6A1E6021629A740005A3FDD /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		E6A1E6041629A740005A3FDD /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		E6A1E6051629A740005A3FDD /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		E6A1E6041629A740005A3FDD /* HomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		E6A1E60C1629B8BD005A3FDD /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		E6A1E60E1629BA38005A3FDD /* DrinkSelectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrinkSelectionViewController.h; sourceTree = "<group>"; };
+		E6A1E60F1629BA38005A3FDD /* DrinkSelectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrinkSelectionViewController.m; sourceTree = "<group>"; };
+		E6A1E6121629BD2C005A3FDD /* GameRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameRootViewController.h; sourceTree = "<group>"; };
+		E6A1E6131629BD2C005A3FDD /* GameRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameRootViewController.m; sourceTree = "<group>"; };
+		E6A1E6151629BE48005A3FDD /* GameModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameModel.h; sourceTree = "<group>"; };
+		E6A1E6161629BE48005A3FDD /* GameModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameModel.m; sourceTree = "<group>"; };
+		E6A1E6181629BE65005A3FDD /* DrinkModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrinkModel.h; sourceTree = "<group>"; };
+		E6A1E6191629BE65005A3FDD /* DrinkModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrinkModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,9 +97,13 @@
 			children = (
 				E6A1E5F81629A740005A3FDD /* AppDelegate.h */,
 				E6A1E5F91629A740005A3FDD /* AppDelegate.m */,
-				E6A1E6011629A740005A3FDD /* MainStoryboard.storyboard */,
-				E6A1E6041629A740005A3FDD /* ViewController.h */,
-				E6A1E6051629A740005A3FDD /* ViewController.m */,
+				E6A1E6041629A740005A3FDD /* HomeViewController.h */,
+				E6A1E60C1629B8BD005A3FDD /* HomeViewController.m */,
+				E6A1E60E1629BA38005A3FDD /* DrinkSelectionViewController.h */,
+				E6A1E60F1629BA38005A3FDD /* DrinkSelectionViewController.m */,
+				E6A1E6121629BD2C005A3FDD /* GameRootViewController.h */,
+				E6A1E6131629BD2C005A3FDD /* GameRootViewController.m */,
+				E6A1E6111629BAA4005A3FDD /* Model */,
 				E6A1E5F01629A740005A3FDD /* Supporting Files */,
 			);
 			path = BartenderGuessWho;
@@ -96,6 +112,7 @@
 		E6A1E5F01629A740005A3FDD /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				E6A1E6011629A740005A3FDD /* MainStoryboard.storyboard */,
 				E6A1E5F11629A740005A3FDD /* BartenderGuessWho-Info.plist */,
 				E6A1E5F21629A740005A3FDD /* InfoPlist.strings */,
 				E6A1E5F51629A740005A3FDD /* main.m */,
@@ -103,8 +120,28 @@
 				E6A1E5FB1629A740005A3FDD /* Default.png */,
 				E6A1E5FD1629A740005A3FDD /* Default@2x.png */,
 				E6A1E5FF1629A740005A3FDD /* Default-568h@2x.png */,
+				E6A1E61B1629C4E1005A3FDD /* DrinkImages */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E6A1E6111629BAA4005A3FDD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E6A1E6151629BE48005A3FDD /* GameModel.h */,
+				E6A1E6161629BE48005A3FDD /* GameModel.m */,
+				E6A1E6181629BE65005A3FDD /* DrinkModel.h */,
+				E6A1E6191629BE65005A3FDD /* DrinkModel.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		E6A1E61B1629C4E1005A3FDD /* DrinkImages */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = DrinkImages;
+			path = Images/DrinkImages;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -175,7 +212,11 @@
 			files = (
 				E6A1E5F61629A740005A3FDD /* main.m in Sources */,
 				E6A1E5FA1629A740005A3FDD /* AppDelegate.m in Sources */,
-				E6A1E6061629A740005A3FDD /* ViewController.m in Sources */,
+				E6A1E60D1629B8BD005A3FDD /* HomeViewController.m in Sources */,
+				E6A1E6101629BA38005A3FDD /* DrinkSelectionViewController.m in Sources */,
+				E6A1E6141629BD2C005A3FDD /* GameRootViewController.m in Sources */,
+				E6A1E6171629BE48005A3FDD /* GameModel.m in Sources */,
+				E6A1E61A1629BE65005A3FDD /* DrinkModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

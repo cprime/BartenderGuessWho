@@ -1,23 +1,119 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2519" systemVersion="12A206j" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2843" systemVersion="12C60" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="lES-Kh-erD">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1856"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1929"/>
     </dependencies>
     <scenes>
-        <!--class Prefix:identifier View Controller-->
-        <scene sceneID="4">
+        <!--Navigation Controller-->
+        <scene sceneID="2At-gA-u3e">
             <objects>
-                <viewController id="2" customClass="ViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="5">
-                        <rect key="frame" x="0.0" y="20" width="768" height="1004"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="3" sceneMemberID="firstResponder"/>
+                <navigationController definesPresentationContext="YES" navigationBarHidden="YES" id="lES-Kh-erD" sceneMemberID="viewController">
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="IVM-DU-elc">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="3Ek-Hl-3be" kind="relationship" relationship="rootViewController" id="7XE-cu-vCe"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LGV-S6-qUk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-1057" y="-438"/>
+        </scene>
+        <!--Home View Controller-->
+        <scene sceneID="hJe-ER-7nd">
+            <objects>
+                <viewController storyboardIdentifier="HomeViewController" id="3Ek-Hl-3be" customClass="HomeViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BIH-2w-XsD">
+                        <rect key="frame" x="0.0" y="20" width="1024" height="748"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yFF-ae-ite">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Play Game">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playGameButtonClicked:" destination="3Ek-Hl-3be" eventType="touchUpInside" id="vRU-qG-uMt"/>
+                                    <segue destination="KWw-eA-z2c" kind="modal" id="Lsv-4i-Ygh"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="yFF-ae-ite" secondAttribute="centerX" type="user" id="bKR-fs-ipC"/>
+                            <constraint firstAttribute="centerY" secondItem="yFF-ae-ite" secondAttribute="centerY" type="user" id="tpj-1D-KQQ"/>
+                        </constraints>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="WjE-M1-4uG"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cDb-cZ-Ej6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="92" y="-438"/>
+        </scene>
+        <!--Drink Selection View Controller-->
+        <scene sceneID="9sf-xs-NBT">
+            <objects>
+                <viewController storyboardIdentifier="DrinkSelectionViewController" id="KWw-eA-z2c" customClass="DrinkSelectionViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XuM-Kn-x4N">
+                        <rect key="frame" x="0.0" y="20" width="768" height="748"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="D1b-Sg-Rr4">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="693" id="RZi-ZX-ImX"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="KWw-eA-z2c" id="H0g-9M-60E"/>
+                                    <outlet property="delegate" destination="KWw-eA-z2c" id="05L-7c-OzL"/>
+                                </connections>
+                            </tableView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Choose your drink of choice" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jjL-Kt-CjV">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="D1b-Sg-Rr4" firstAttribute="leading" secondItem="XuM-Kn-x4N" secondAttribute="leading" type="default" id="180-Z5-L1o"/>
+                            <constraint firstItem="D1b-Sg-Rr4" firstAttribute="bottom" secondItem="XuM-Kn-x4N" secondAttribute="bottom" type="default" id="CKx-k0-MIF"/>
+                            <constraint firstItem="jjL-Kt-CjV" firstAttribute="top" secondItem="XuM-Kn-x4N" secondAttribute="top" constant="20" symbolic="YES" type="default" id="JJ5-Bj-PT7"/>
+                            <constraint firstItem="jjL-Kt-CjV" firstAttribute="centerX" secondItem="D1b-Sg-Rr4" secondAttribute="centerX" type="default" id="LvY-6V-YJa"/>
+                            <constraint firstItem="D1b-Sg-Rr4" firstAttribute="trailing" secondItem="XuM-Kn-x4N" secondAttribute="trailing" type="default" id="f07-DY-dhd"/>
+                        </constraints>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    </view>
+                    <modalPageSheetSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2Td-Lk-Q7n" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1272" y="-438"/>
         </scene>
     </scenes>
+    <classes>
+        <class className="DrinkSelectionViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/DrinkSelectionViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="drinksTableView" candidateClass="UITableView"/>
+            </relationships>
+        </class>
+        <class className="HomeViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/HomeViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="playGameButtonClicked:"/>
+            </relationships>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackTranslucent"/>
         <simulatedOrientationMetrics key="orientation"/>

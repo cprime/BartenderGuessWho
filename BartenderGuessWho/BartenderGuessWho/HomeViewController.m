@@ -1,18 +1,18 @@
 //
-//  ViewController.m
+//  HomeViewController.m
 //  BartenderGuessWho
 //
 //  Created by Colden Prime on 10/13/12.
 //  Copyright (c) 2012 IntrepidPursuits. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "HomeViewController.h"
 
-@interface ViewController ()
+@interface HomeViewController ()
 
 @end
 
-@implementation ViewController
+@implementation HomeViewController
 
 - (void)viewDidLoad
 {
@@ -24,6 +24,10 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)playGameButtonClicked:(id)sender {
+    
 }
 
 @end
