@@ -22,6 +22,7 @@
 		E6A1E6141629BD2C005A3FDD /* GameRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6A1E6131629BD2C005A3FDD /* GameRootViewController.m */; };
 		E6A1E6171629BE48005A3FDD /* GameModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E6A1E6161629BE48005A3FDD /* GameModel.m */; };
 		E6A1E61A1629BE65005A3FDD /* DrinkModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E6A1E6191629BE65005A3FDD /* DrinkModel.m */; };
+		E6A1E61D1629C5E1005A3FDD /* drinks.plist in Resources */ = {isa = PBXBuildFile; fileRef = E6A1E61C1629C5E1005A3FDD /* drinks.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +50,7 @@
 		E6A1E6161629BE48005A3FDD /* GameModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameModel.m; sourceTree = "<group>"; };
 		E6A1E6181629BE65005A3FDD /* DrinkModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrinkModel.h; sourceTree = "<group>"; };
 		E6A1E6191629BE65005A3FDD /* DrinkModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrinkModel.m; sourceTree = "<group>"; };
+		E6A1E61C1629C5E1005A3FDD /* drinks.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = drinks.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 		E6A1E5F01629A740005A3FDD /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				E6A1E61C1629C5E1005A3FDD /* drinks.plist */,
 				E6A1E6011629A740005A3FDD /* MainStoryboard.storyboard */,
 				E6A1E5F11629A740005A3FDD /* BartenderGuessWho-Info.plist */,
 				E6A1E5F21629A740005A3FDD /* InfoPlist.strings */,
@@ -200,6 +203,7 @@
 				E6A1E5FE1629A740005A3FDD /* Default@2x.png in Resources */,
 				E6A1E6001629A740005A3FDD /* Default-568h@2x.png in Resources */,
 				E6A1E6031629A740005A3FDD /* MainStoryboard.storyboard in Resources */,
+				E6A1E61D1629C5E1005A3FDD /* drinks.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
