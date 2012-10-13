@@ -36,7 +36,9 @@
 		E6A1E6351629CA5C005A3FDD /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6A1E62A1629CA5C005A3FDD /* StoreKit.framework */; };
 		E6A1E6361629CA5C005A3FDD /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6A1E62B1629CA5C005A3FDD /* SystemConfiguration.framework */; };
 		E6A1E6371629CA5C005A3FDD /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6A1E62C1629CA5C005A3FDD /* Twitter.framework */; };
-		E6A1E63E1629D1FE005A3FDD /* Move.m in Sources */ = {isa = PBXBuildFile; fileRef = E6A1E63D1629D1FE005A3FDD /* Move.m */; };
+		E6A1E63E1629D1FE005A3FDD /* MoveModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E6A1E63D1629D1FE005A3FDD /* MoveModel.m */; };
+		E6A1E6411629E49A005A3FDD /* DrinkGridView.m in Sources */ = {isa = PBXBuildFile; fileRef = E6A1E6401629E49A005A3FDD /* DrinkGridView.m */; };
+		E6A1E6441629E93B005A3FDD /* GameMoveTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E6A1E6431629E93B005A3FDD /* GameMoveTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -78,8 +80,12 @@
 		E6A1E62A1629CA5C005A3FDD /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		E6A1E62B1629CA5C005A3FDD /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		E6A1E62C1629CA5C005A3FDD /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
-		E6A1E63C1629D1FE005A3FDD /* Move.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Move.h; sourceTree = "<group>"; };
-		E6A1E63D1629D1FE005A3FDD /* Move.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Move.m; sourceTree = "<group>"; };
+		E6A1E63C1629D1FE005A3FDD /* MoveModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoveModel.h; sourceTree = "<group>"; };
+		E6A1E63D1629D1FE005A3FDD /* MoveModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoveModel.m; sourceTree = "<group>"; };
+		E6A1E63F1629E49A005A3FDD /* DrinkGridView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrinkGridView.h; sourceTree = "<group>"; };
+		E6A1E6401629E49A005A3FDD /* DrinkGridView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrinkGridView.m; sourceTree = "<group>"; };
+		E6A1E6421629E93B005A3FDD /* GameMoveTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameMoveTableViewCell.h; sourceTree = "<group>"; };
+		E6A1E6431629E93B005A3FDD /* GameMoveTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameMoveTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +166,10 @@
 				E6A1E60F1629BA38005A3FDD /* DrinkSelectionViewController.m */,
 				E6A1E6121629BD2C005A3FDD /* GameRootViewController.h */,
 				E6A1E6131629BD2C005A3FDD /* GameRootViewController.m */,
+				E6A1E6421629E93B005A3FDD /* GameMoveTableViewCell.h */,
+				E6A1E6431629E93B005A3FDD /* GameMoveTableViewCell.m */,
+				E6A1E63F1629E49A005A3FDD /* DrinkGridView.h */,
+				E6A1E6401629E49A005A3FDD /* DrinkGridView.m */,
 				E6A1E6111629BAA4005A3FDD /* Model */,
 				E6A1E5F01629A740005A3FDD /* Supporting Files */,
 			);
@@ -190,8 +200,8 @@
 				E6A1E6161629BE48005A3FDD /* GameModel.m */,
 				E6A1E6181629BE65005A3FDD /* DrinkModel.h */,
 				E6A1E6191629BE65005A3FDD /* DrinkModel.m */,
-				E6A1E63C1629D1FE005A3FDD /* Move.h */,
-				E6A1E63D1629D1FE005A3FDD /* Move.m */,
+				E6A1E63C1629D1FE005A3FDD /* MoveModel.h */,
+				E6A1E63D1629D1FE005A3FDD /* MoveModel.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -278,7 +288,9 @@
 				E6A1E6141629BD2C005A3FDD /* GameRootViewController.m in Sources */,
 				E6A1E6171629BE48005A3FDD /* GameModel.m in Sources */,
 				E6A1E61A1629BE65005A3FDD /* DrinkModel.m in Sources */,
-				E6A1E63E1629D1FE005A3FDD /* Move.m in Sources */,
+				E6A1E63E1629D1FE005A3FDD /* MoveModel.m in Sources */,
+				E6A1E6411629E49A005A3FDD /* DrinkGridView.m in Sources */,
+				E6A1E6441629E93B005A3FDD /* GameMoveTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

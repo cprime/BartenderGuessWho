@@ -28,6 +28,8 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    
+    self.drinks = [[[DrinkModel allDrinks] allValues] mutableCopy];
 }
 
 - (void)didReceiveMemoryWarning

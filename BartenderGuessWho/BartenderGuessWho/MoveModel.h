@@ -1,5 +1,5 @@
 //
-//  Move.h
+//  MoveModel.h
 //  BartenderGuessWho
 //
 //  Created by Colden Prime on 10/13/12.
@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface Move : NSObject<KCSPersistable>
+@interface MoveModel : NSObject<KCSPersistable>
 
 @property (strong, nonatomic) NSString *objectId;
 @property (strong, nonatomic) NSString *game;

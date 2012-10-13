@@ -7,6 +7,7 @@
 //
 
 #import "HomeViewController.h"
+#import "GameRootViewController.h"
 
 @interface HomeViewController ()
 
@@ -50,6 +51,14 @@
 
 - (IBAction)playGameButtonClicked:(id)sender {
     
+}
+
+#pragma mark - DrinkSelectionViewControllerDelegate methods
+
+- (void)viewController:(DrinkSelectionViewController *)viewController didSelectDrink:(DrinkModel *)drink {
+    GameRootViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"GameRootViewController"];
+    //TODO: setup game
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 @end

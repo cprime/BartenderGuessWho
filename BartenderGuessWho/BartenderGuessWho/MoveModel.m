@@ -1,14 +1,14 @@
 //
-//  Move.m
+//  MoveModel.m
 //  BartenderGuessWho
 //
 //  Created by Colden Prime on 10/13/12.
 //  Copyright (c) 2012 IntrepidPursuits. All rights reserved.
 //
 
-#import "Move.h"
+#import "MoveModel.h"
 
-@implementation Move
+@implementation MoveModel
 
 - (NSDictionary *)hostToKinveyPropertyMapping
 {
