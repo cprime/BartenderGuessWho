@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+@class GameModel;
+
 @interface GameRootViewController : UIViewController
+
+@property (strong, nonatomic) GameModel *game;
 
 @end

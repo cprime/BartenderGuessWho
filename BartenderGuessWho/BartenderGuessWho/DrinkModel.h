@@ -10,4 +10,12 @@
 
 @interface DrinkModel : NSObject
 
+@property (strong, nonatomic) NSString *name;
+@property (strong, nonatomic) NSString *glass;
+@property (strong, nonatomic) NSString *imageName;
+@property (strong, nonatomic) NSArray *ingredients;
+
++ (NSMutableDictionary *)allDrinks;
++ (DrinkModel *)drinkWithName:(NSString *)name;
+
 @end
