@@ -23,6 +23,19 @@
 		E6A1E6171629BE48005A3FDD /* GameModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E6A1E6161629BE48005A3FDD /* GameModel.m */; };
 		E6A1E61A1629BE65005A3FDD /* DrinkModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E6A1E6191629BE65005A3FDD /* DrinkModel.m */; };
 		E6A1E61D1629C5E1005A3FDD /* drinks.plist in Resources */ = {isa = PBXBuildFile; fileRef = E6A1E61C1629C5E1005A3FDD /* drinks.plist */; };
+		E6A1E61F1629C9D9005A3FDD /* libUAirship-1.3.3.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E6A1E61E1629C9D9005A3FDD /* libUAirship-1.3.3.a */; };
+		E6A1E6211629C9E0005A3FDD /* KinveyKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6A1E6201629C9E0005A3FDD /* KinveyKit.framework */; };
+		E6A1E62D1629CA5C005A3FDD /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6A1E6221629CA5C005A3FDD /* Accounts.framework */; };
+		E6A1E62E1629CA5C005A3FDD /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6A1E6231629CA5C005A3FDD /* CFNetwork.framework */; };
+		E6A1E62F1629CA5C005A3FDD /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6A1E6241629CA5C005A3FDD /* CoreLocation.framework */; };
+		E6A1E6301629CA5C005A3FDD /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6A1E6251629CA5C005A3FDD /* CoreTelephony.framework */; };
+		E6A1E6311629CA5C005A3FDD /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E6A1E6261629CA5C005A3FDD /* libsqlite3.dylib */; };
+		E6A1E6321629CA5C005A3FDD /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E6A1E6271629CA5C005A3FDD /* libz.dylib */; };
+		E6A1E6331629CA5C005A3FDD /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6A1E6281629CA5C005A3FDD /* MobileCoreServices.framework */; };
+		E6A1E6341629CA5C005A3FDD /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6A1E6291629CA5C005A3FDD /* Security.framework */; };
+		E6A1E6351629CA5C005A3FDD /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6A1E62A1629CA5C005A3FDD /* StoreKit.framework */; };
+		E6A1E6361629CA5C005A3FDD /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6A1E62B1629CA5C005A3FDD /* SystemConfiguration.framework */; };
+		E6A1E6371629CA5C005A3FDD /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6A1E62C1629CA5C005A3FDD /* Twitter.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +64,19 @@
 		E6A1E6181629BE65005A3FDD /* DrinkModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrinkModel.h; sourceTree = "<group>"; };
 		E6A1E6191629BE65005A3FDD /* DrinkModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrinkModel.m; sourceTree = "<group>"; };
 		E6A1E61C1629C5E1005A3FDD /* drinks.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = drinks.plist; sourceTree = "<group>"; };
+		E6A1E61E1629C9D9005A3FDD /* libUAirship-1.3.3.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libUAirship-1.3.3.a"; sourceTree = "<group>"; };
+		E6A1E6201629C9E0005A3FDD /* KinveyKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = KinveyKit.framework; sourceTree = "<group>"; };
+		E6A1E6221629CA5C005A3FDD /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		E6A1E6231629CA5C005A3FDD /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		E6A1E6241629CA5C005A3FDD /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		E6A1E6251629CA5C005A3FDD /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		E6A1E6261629CA5C005A3FDD /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		E6A1E6271629CA5C005A3FDD /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		E6A1E6281629CA5C005A3FDD /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		E6A1E6291629CA5C005A3FDD /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		E6A1E62A1629CA5C005A3FDD /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		E6A1E62B1629CA5C005A3FDD /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		E6A1E62C1629CA5C005A3FDD /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,9 +84,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E6A1E5EA1629A740005A3FDD /* UIKit.framework in Frameworks */,
-				E6A1E5EC1629A740005A3FDD /* Foundation.framework in Frameworks */,
+				E6A1E62D1629CA5C005A3FDD /* Accounts.framework in Frameworks */,
+				E6A1E62E1629CA5C005A3FDD /* CFNetwork.framework in Frameworks */,
+				E6A1E62F1629CA5C005A3FDD /* CoreLocation.framework in Frameworks */,
+				E6A1E6301629CA5C005A3FDD /* CoreTelephony.framework in Frameworks */,
+				E6A1E6311629CA5C005A3FDD /* libsqlite3.dylib in Frameworks */,
+				E6A1E6321629CA5C005A3FDD /* libz.dylib in Frameworks */,
+				E6A1E6331629CA5C005A3FDD /* MobileCoreServices.framework in Frameworks */,
+				E6A1E6341629CA5C005A3FDD /* Security.framework in Frameworks */,
+				E6A1E6351629CA5C005A3FDD /* StoreKit.framework in Frameworks */,
+				E6A1E6361629CA5C005A3FDD /* SystemConfiguration.framework in Frameworks */,
+				E6A1E6371629CA5C005A3FDD /* Twitter.framework in Frameworks */,
 				E6A1E5EE1629A740005A3FDD /* CoreGraphics.framework in Frameworks */,
+				E6A1E5EC1629A740005A3FDD /* Foundation.framework in Frameworks */,
+				E6A1E5EA1629A740005A3FDD /* UIKit.framework in Frameworks */,
+				E6A1E61F1629C9D9005A3FDD /* libUAirship-1.3.3.a in Frameworks */,
+				E6A1E6211629C9E0005A3FDD /* KinveyKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,6 +126,19 @@
 		E6A1E5E81629A740005A3FDD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E6A1E6221629CA5C005A3FDD /* Accounts.framework */,
+				E6A1E6231629CA5C005A3FDD /* CFNetwork.framework */,
+				E6A1E6241629CA5C005A3FDD /* CoreLocation.framework */,
+				E6A1E6251629CA5C005A3FDD /* CoreTelephony.framework */,
+				E6A1E6261629CA5C005A3FDD /* libsqlite3.dylib */,
+				E6A1E6271629CA5C005A3FDD /* libz.dylib */,
+				E6A1E6281629CA5C005A3FDD /* MobileCoreServices.framework */,
+				E6A1E6291629CA5C005A3FDD /* Security.framework */,
+				E6A1E62A1629CA5C005A3FDD /* StoreKit.framework */,
+				E6A1E62B1629CA5C005A3FDD /* SystemConfiguration.framework */,
+				E6A1E62C1629CA5C005A3FDD /* Twitter.framework */,
+				E6A1E6201629C9E0005A3FDD /* KinveyKit.framework */,
+				E6A1E61E1629C9D9005A3FDD /* libUAirship-1.3.3.a */,
 				E6A1E5E91629A740005A3FDD /* UIKit.framework */,
 				E6A1E5EB1629A740005A3FDD /* Foundation.framework */,
 				E6A1E5ED1629A740005A3FDD /* CoreGraphics.framework */,
@@ -301,9 +353,18 @@
 		E6A1E60A1629A740005A3FDD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BartenderGuessWho/BartenderGuessWho-Prefix.pch";
 				INFOPLIST_FILE = "BartenderGuessWho/BartenderGuessWho-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -312,9 +373,18 @@
 		E6A1E60B1629A740005A3FDD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BartenderGuessWho/BartenderGuessWho-Prefix.pch";
 				INFOPLIST_FILE = "BartenderGuessWho/BartenderGuessWho-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

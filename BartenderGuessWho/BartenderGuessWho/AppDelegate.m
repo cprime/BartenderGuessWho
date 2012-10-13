@@ -12,10 +12,15 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+
+    KCSClient *client = [[KCSClient sharedClient] initializeKinveyServiceForAppKey:@"kid_eT2U7Bab_"
+                                                 withAppSecret:@"3ae46d48bc9449188bd591b1e9992677"
+                                                  usingOptions:nil];
+    
     return YES;
+#pragma unused(client)
 }
-							
+
 - (void)applicationWillResignActive:(UIApplication *)application
 {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
