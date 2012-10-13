@@ -39,7 +39,7 @@
                                 </state>
                                 <connections>
                                     <action selector="playGameButtonClicked:" destination="3Ek-Hl-3be" eventType="touchUpInside" id="vRU-qG-uMt"/>
-                                    <segue destination="KWw-eA-z2c" kind="modal" id="Lsv-4i-Ygh"/>
+                                    <segue destination="KWw-eA-z2c" kind="modal" modalPresentationStyle="pageSheet" id="Lsv-4i-Ygh"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -61,7 +61,7 @@
             <objects>
                 <viewController storyboardIdentifier="DrinkSelectionViewController" id="KWw-eA-z2c" customClass="DrinkSelectionViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XuM-Kn-x4N">
-                        <rect key="frame" x="0.0" y="20" width="768" height="748"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="768"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="D1b-Sg-Rr4">

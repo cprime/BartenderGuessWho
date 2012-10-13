@@ -7,6 +7,8 @@
 		<string></string>
 		<key>glass</key>
 		<string></string>
+		<key>image</key>
+		<string></string>
 		<key>ingredients</key>
 		<array/>
 	</dict>

@@ -18,6 +18,28 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+    [KCSPing pingKinveyWithBlock:^(KCSPingResult *result) {
+        // This block gets executed when the ping completes
+        NSString *title;
+        
+        if (result.pingWasSuccessful){
+            title = @"Kinvey Ping Success :)";
+        } else {
+            title = @"Kinvey Ping Failed :(";
+        }
+        
+        // Log the result
+        NSLog(@"%@", result.description);
+        
+        // Display an alert stating the result
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle: title
+                                                        message: [result description]
+                                                       delegate: nil
+                                              cancelButtonTitle: @"OK"
+                                              otherButtonTitles: nil];
+        [alert show];
+    }];
 }
 
 - (void)didReceiveMemoryWarning
