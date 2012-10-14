@@ -11,9 +11,10 @@
 #import "DrinkModel.h"
 #import "MoveModel.h"
 #import "GameMoveTableViewCell.h"
+#import "AnswerViewController.h"
 
-#define kGameCheckForGameTime 100
-#define kGameCheckForMoveTime 100
+#define kGameCheckForGameTime 1000
+#define kGameCheckForMoveTime 1000
 
 @interface GameRootViewController ()
 @property (strong, nonatomic) KCSCollection *gameCollection;
@@ -38,9 +39,17 @@
             self.statusLabel.text = @"Ask your opponent a yes or no question.";
             break;
         }
+        case GameStateWaitingForPlayerResponse: {
+            self.statusLabel.text = @"Answer their question.";
+            break;
+        }
         case GameStateWaitingForOpponentMove: {
             self.statusLabel.text = @"Waiting for your opponent to make a move.";
             [self startPlayerMoveTimer];
+            break;
+        }
+        case GameStateWaitingForOpponentResponse: {
+            self.statusLabel.text = @"Waiting for your opponent to answer your question.";
             break;
         }
         case GameStateGameOver: {
@@ -118,6 +127,7 @@
     
     KCSQuery *query = [KCSQuery queryOnField:@"game" withExactMatchForValue:self.game.kinveyId];
     
+    
     [self.moveCollection fetchWithQuery:query withCompletionBlock:^(NSArray *objectsOrNil, NSError *errorOrNil) {
         if(errorOrNil) {
             UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Unable to find recent moves"
@@ -130,7 +140,23 @@
             [self startPlayerMoveTimer];
         } else {
             if([self.moves count] < [objectsOrNil count]) {
-                self.moves = [objectsOrNil mutableCopy];
+                self.moves = [[objectsOrNil sortedArrayUsingComparator:^NSComparisonResult(id obj1, id obj2) {
+                    NSComparisonResult result = [[[obj1 metadata] lastModifiedTime] compare:[[obj2 metadata] lastModifiedTime]];
+                    if(result == NSOrderedAscending) result = NSOrderedDescending;
+                    else if(result == NSOrderedDescending) result = NSOrderedAscending;
+                    return result;
+                }] mutableCopy];
+                [self setGameState:GameStateWaitingForPlayerResponse];
+                
+                AnswerViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"AnswerViewController"];
+                vc.opponent = self.otherUser;
+                if([self.moves count] > 0) {
+                    vc.move = [self.moves objectAtIndex:0];
+                }
+                vc.delegate = self;
+                vc.modalPresentationStyle = UIModalPresentationFormSheet;
+                
+                [self presentViewController:vc animated:YES completion:nil];
             }
         }
     } withProgressBlock:nil];
@@ -139,7 +165,46 @@
 #pragma mark - actions
 
 - (IBAction)askQuestionButtonClicked:(id)sender {
-    
+    if(self.gameState == GameStateWaitingForPlayerToJoin) {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Unable to ask question."
+                                                        message:@"You must wait for another player to join"
+                                                       delegate:self
+                                              cancelButtonTitle:@"Okay"
+                                              otherButtonTitles:nil];
+        [alert show];
+    } else if(self.gameState == GameStateWaitingForOpponentMove) {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Unable to ask question."
+                                                        message:@"You must wait for your opponent to ask a question"
+                                                       delegate:self
+                                              cancelButtonTitle:@"Okay"
+                                              otherButtonTitles:nil];
+        [alert show];
+    } else if(self.gameState == GameStateGameOver) {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Unable to ask question."
+                                                        message:@"The Game is over"
+                                                       delegate:self
+                                              cancelButtonTitle:@"Okay"
+                                              otherButtonTitles:nil];
+        [alert show];
+    } else {
+        MoveModel *move = [[MoveModel alloc] init];
+        move.game = self.game.kinveyId;
+        move.player = [[[KCSClient sharedClient] currentUser] kinveyObjectId];
+        move.question = self.questionTextField.text;
+        
+        [self.moveAppdataStore saveObject:move withCompletionBlock:^(NSArray *objectsOrNil, NSError *errorOrNil) {
+            if(errorOrNil) {
+                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Unable to ask question."
+                                                                message:@"Try again later"
+                                                               delegate:self
+                                                      cancelButtonTitle:@"Okay"
+                                                      otherButtonTitles:nil];
+                [alert show];
+            } else {
+            
+            }
+        } withProgressBlock:nil];
+    }
 }
 
 - (IBAction)cancelGuessDrink:(UITapGestureRecognizer *)tapGr {
@@ -263,6 +328,51 @@
 }
 - (void)gridView:(DrinkGridView *)gridView didDeselectDrink:(DrinkModel *)drink {
     
+}
+
+#pragma mark - AnswerViewControllerDelegate methods
+
+- (void)saveMove:(MoveModel *)move {
+    [self.moveAppdataStore saveObject:move
+                  withCompletionBlock:^(NSArray *objectsOrNil, NSError *errorOrNil) {
+                      if(errorOrNil) {
+                          UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Unable to commit move"
+                                                                          message:nil
+                                                                         delegate:self
+                                                                cancelButtonTitle:@"Okay"
+                                                                otherButtonTitles:nil];
+                          [alert show];
+                      } else {
+                          KCSQuery *query = [KCSQuery queryOnField:@"game" withExactMatchForValue:self.game.kinveyId];
+                          
+                          
+                          [self.moveCollection fetchWithQuery:query withCompletionBlock:^(NSArray *objectsOrNil, NSError *errorOrNil) {
+                              if([self.moves count] < [objectsOrNil count]) {
+                                  self.moves = [[objectsOrNil sortedArrayUsingComparator:^NSComparisonResult(id obj1, id obj2) {
+                                      NSComparisonResult result = [[[obj1 metadata] lastModifiedTime] compare:[[obj2 metadata] lastModifiedTime]];
+                                      if(result == NSOrderedAscending) result = NSOrderedDescending;
+                                      else if(result == NSOrderedDescending) result = NSOrderedAscending;
+                                      return result;
+                                  }] mutableCopy];
+                                  [self setGameState:GameStateWaitingForPlayerResponse];
+                                  
+                                  [[self movesTableView] reloadData];
+                              }
+                              
+                          } withProgressBlock:nil];
+                      }
+                  } withProgressBlock:nil];
+}
+
+- (void)didSelectYesForViewController: (AnswerViewController *)viewController {
+    MoveModel *move = viewController.move;
+    move.confirmed = [NSNumber numberWithBool:YES];
+    [self saveMove:move];
+}
+- (void)didSelectNoForViewController: (AnswerViewController *)viewController {
+    MoveModel *move = viewController.move;
+    move.confirmed = [NSNumber numberWithBool:NO];
+    [self saveMove:move];
 }
 
 @end

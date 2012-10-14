@@ -18,6 +18,7 @@
     @"player" : @"player",
     @"question" : @"question",
     @"quessedCocktail" : @"quessedCocktail",
+    @"confirmed": @"confirmed",
     };
 }
 

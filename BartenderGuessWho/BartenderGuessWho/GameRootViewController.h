@@ -8,17 +8,20 @@
 
 #import <UIKit/UIKit.h>
 #import "DrinkGridView.h"
+#import "AnswerViewController.h"
 
 typedef enum {
     GameStateWaitingForPlayerToJoin,
     GameStateWaitingForPlayerMove,
+    GameStateWaitingForPlayerResponse,
     GameStateWaitingForOpponentMove,
+    GameStateWaitingForOpponentResponse,
     GameStateGameOver,
 } GameState;
 
 @class GameModel;
 
-@interface GameRootViewController : UIViewController<UITableViewDelegate, UITableViewDataSource, DrinkGridViewDelegate>
+@interface GameRootViewController : UIViewController<UITableViewDelegate, UITableViewDataSource, DrinkGridViewDelegate, AnswerViewControllerDelegate>
 
 @property (assign, nonatomic) GameState gameState;
 
@@ -38,7 +41,7 @@ typedef enum {
 @property (strong, nonatomic) IBOutlet UIImageView *otherCocktailImageView;
 @property (strong, nonatomic) IBOutlet UILabel *otherPlayerLabel;
 
-@property (strong, nonatomic) IBOutlet UITextField *questionTextLabel;
+@property (strong, nonatomic) IBOutlet UITextField *questionTextField;
 @property (strong, nonatomic) IBOutlet UIButton *askQuestionButton;
 
 @property (strong, nonatomic) IBOutlet UITableView *movesTableView;

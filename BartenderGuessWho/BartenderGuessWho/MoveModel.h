@@ -15,5 +15,6 @@
 @property (strong, nonatomic) NSString *player;
 @property (strong, nonatomic) NSString *question;
 @property (strong, nonatomic) NSString *quessedCocktail;
+@property (strong, nonatomic) NSNumber *confirmed;
 
 @end

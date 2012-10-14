@@ -72,6 +72,7 @@
 		E6A1E68D162A4589005A3FDD /* SexontheBeach.png in Resources */ = {isa = PBXBuildFile; fileRef = E6A1E66E162A4589005A3FDD /* SexontheBeach.png */; };
 		E6A1E68E162A4589005A3FDD /* SingaporeSling.png in Resources */ = {isa = PBXBuildFile; fileRef = E6A1E66F162A4589005A3FDD /* SingaporeSling.png */; };
 		E6A1E68F162A4589005A3FDD /* WhiteRussian.png in Resources */ = {isa = PBXBuildFile; fileRef = E6A1E670162A4589005A3FDD /* WhiteRussian.png */; };
+		E6A1E693162A5176005A3FDD /* AnswerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6A1E692162A5176005A3FDD /* AnswerViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -153,6 +154,8 @@
 		E6A1E66E162A4589005A3FDD /* SexontheBeach.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SexontheBeach.png; sourceTree = "<group>"; };
 		E6A1E66F162A4589005A3FDD /* SingaporeSling.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SingaporeSling.png; sourceTree = "<group>"; };
 		E6A1E670162A4589005A3FDD /* WhiteRussian.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WhiteRussian.png; sourceTree = "<group>"; };
+		E6A1E691162A5175005A3FDD /* AnswerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnswerViewController.h; sourceTree = "<group>"; };
+		E6A1E692162A5176005A3FDD /* AnswerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnswerViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -239,6 +242,8 @@
 				E6A1E6401629E49A005A3FDD /* DrinkGridView.m */,
 				E6A1E6451629F1A7005A3FDD /* DrinkGridNodeView.h */,
 				E6A1E6461629F1A7005A3FDD /* DrinkGridNodeView.m */,
+				E6A1E691162A5175005A3FDD /* AnswerViewController.h */,
+				E6A1E692162A5176005A3FDD /* AnswerViewController.m */,
 				E6A1E6111629BAA4005A3FDD /* Model */,
 				E6A1E5F01629A740005A3FDD /* Supporting Files */,
 			);
@@ -425,6 +430,7 @@
 				E6A1E6411629E49A005A3FDD /* DrinkGridView.m in Sources */,
 				E6A1E6441629E93B005A3FDD /* GameMoveTableViewCell.m in Sources */,
 				E6A1E6471629F1A7005A3FDD /* DrinkGridNodeView.m in Sources */,
+				E6A1E693162A5176005A3FDD /* AnswerViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
