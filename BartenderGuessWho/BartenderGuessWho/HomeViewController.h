@@ -11,6 +11,4 @@
 
 @interface HomeViewController : UIViewController<DrinkSelectionViewControllerDelegate, UIAlertViewDelegate>
 
-- (IBAction)playGameButtonClicked:(id)sender;
-
 @end

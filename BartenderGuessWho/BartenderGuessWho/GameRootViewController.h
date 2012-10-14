@@ -9,16 +9,28 @@
 #import <UIKit/UIKit.h>
 #import "DrinkGridView.h"
 
+typedef enum {
+    GameStateWaitingForPlayerToJoin,
+    GameStateWaitingForPlayerMove,
+    GameStateWaitingForOpponentMove,
+    GameStateGameOver,
+} GameState;
+
 @class GameModel;
 
 @interface GameRootViewController : UIViewController<UITableViewDelegate, UITableViewDataSource, DrinkGridViewDelegate>
 
+@property (assign, nonatomic) GameState gameState;
+
 @property (strong, nonatomic) GameModel *game;
+@property (strong, nonatomic) DrinkModel *myDrink;
 @property (strong, nonatomic) NSMutableArray *drinks;
 @property (strong, nonatomic) NSArray *moves;
+@property (strong, nonatomic) KCSUser *otherUser;
 
 @property (strong, nonatomic) IBOutlet UILabel *statusLabel;
 
+@property (strong, nonatomic) IBOutlet UIView *fadeOutView;
 @property (strong, nonatomic) IBOutlet UIView *drinkGridContainer;
 @property (strong, nonatomic) IBOutlet DrinkGridView *drinkGridView;
 

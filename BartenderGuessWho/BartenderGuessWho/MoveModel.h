@@ -10,7 +10,7 @@
 
 @interface MoveModel : NSObject<KCSPersistable>
 
-@property (strong, nonatomic) NSString *objectId;
+@property (strong, nonatomic) NSString *kinveyId;
 @property (strong, nonatomic) NSString *game;
 @property (strong, nonatomic) NSString *player;
 @property (strong, nonatomic) NSString *question;

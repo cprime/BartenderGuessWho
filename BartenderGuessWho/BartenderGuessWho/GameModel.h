@@ -10,7 +10,7 @@
 
 @interface GameModel : NSObject<KCSPersistable>
 
-@property (strong, nonatomic) NSString *objectId;
+@property (strong, nonatomic) NSString *kinveyId;
 @property (strong, nonatomic) NSString *player1;
 @property (strong, nonatomic) NSString *player2;
 @property (strong, nonatomic) NSString *cocktail1;

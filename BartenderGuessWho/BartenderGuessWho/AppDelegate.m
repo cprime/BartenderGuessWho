@@ -14,8 +14,14 @@
 {
 
     KCSClient *client = [[KCSClient sharedClient] initializeKinveyServiceForAppKey:@"kid_eT2U7Bab_"
-                                                 withAppSecret:@"3ae46d48bc9449188bd591b1e9992677"
-                                                  usingOptions:nil];
+                                                                     withAppSecret:@"3ae46d48bc9449188bd591b1e9992677"
+                                                                      usingOptions:nil];
+    
+    [KCSClient configureLoggingWithNetworkEnabled:YES
+                                     debugEnabled:YES
+                                     traceEnabled:YES
+                                   warningEnabled:YES
+                                     errorEnabled:YES];
     
     return YES;
 #pragma unused(client)

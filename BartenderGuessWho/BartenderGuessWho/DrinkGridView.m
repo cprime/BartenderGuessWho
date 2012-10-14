@@ -34,22 +34,21 @@
                 if(node.selected) {
                     if(self.gridMode == DrinkGridViewModeRegular) {
                         node.selected = NO;
-                        node.alpha = kDrinkGridViewNodeSelectedAlpha;
+                        node.alpha = kDrinkGridViewNodeDeselectedAlpha;
+                        [self.delegate gridView:self didDeselectDrink:node.drink];
                     } else if(self.gridMode == DrinkGridViewModeSelection) {
                         for(DrinkGridNodeView *nodeB in self.drinkNodes) {
                             if(node != nodeB) {
-                                node.alpha = kDrinkGridViewNodeDeselectedAlpha;
+                                nodeB.alpha = kDrinkGridViewNodeDeselectedAlpha;
                             }
                         }
+                        [self.delegate gridView:self didSelectDrink:node.drink];
                     }
-                    [self.delegate gridView:self didDeselectDrink:node.drink];
                 } else {
                     if(self.gridMode == DrinkGridViewModeRegular) {
                         node.selected = YES;
-                        node.alpha = kDrinkGridViewNodeDeselectedAlpha;
+                        node.alpha = kDrinkGridViewNodeSelectedAlpha;
                         [self.delegate gridView:self didSelectDrink:node.drink];
-                    } else if(self.gridMode == DrinkGridViewModeSelection) {
-                        //TODO: Dim others
                     }
                 }
             
@@ -85,7 +84,7 @@
                                                                                       kDrinkGridViewNodeWidth,
                                                                                       kDrinkGridViewNodeHeight)];
         node.drink = drink;
-        node.selected = NO;
+        node.selected = YES;
         node.imageView.image = [UIImage imageNamed:@"zombie-cocktail-78-small.jpeg"];//[UIImage imageNamed:drink.imageName];
         
         [self addSubview:node];

@@ -38,7 +38,6 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="playGameButtonClicked:" destination="3Ek-Hl-3be" eventType="touchUpInside" id="vRU-qG-uMt"/>
                                     <segue destination="KWw-eA-z2c" kind="modal" identifier="DrinkSelectionViewController" modalPresentationStyle="pageSheet" id="Lsv-4i-Ygh"/>
                                 </connections>
                             </button>
@@ -196,9 +195,6 @@
                                     <constraint firstItem="GWD-lT-O17" firstAttribute="top" secondItem="8Rj-Ul-WmB" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="o7f-hN-0i0"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6jD-XP-lvM">
-                                <color key="backgroundColor" red="0.42295206460000001" green="0.52441182070000003" blue="0.68958431480000004" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vne-hv-Bf7">
                                 <color key="backgroundColor" red="1" green="0.94174692209999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -241,15 +237,19 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6jD-XP-lvM">
+                                <color key="backgroundColor" red="0.42295206460000001" green="0.52441182070000003" blue="0.68958431480000004" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.45490199329999997" green="0.75294125079999996" blue="0.37647062539999998" alpha="1" colorSpace="deviceRGB"/>
                         <constraints>
                             <constraint firstItem="DjL-1J-qQV" firstAttribute="trailing" secondItem="Vne-hv-Bf7" secondAttribute="trailing" type="default" id="4dS-zc-3Fo"/>
+                            <constraint firstAttribute="bottom" secondItem="6jD-XP-lvM" secondAttribute="bottom" constant="160" id="CIo-5i-eAd"/>
                             <constraint firstItem="fkv-ob-o3A" firstAttribute="bottom" secondItem="Vne-hv-Bf7" secondAttribute="bottom" type="default" id="ClS-Jj-tXE"/>
                             <constraint firstItem="dLZ-vB-zFl" firstAttribute="leading" secondItem="cpb-T6-64Y" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="EJK-Oi-afp"/>
+                            <constraint firstAttribute="trailing" secondItem="6jD-XP-lvM" secondAttribute="trailing" constant="324" id="FGZ-0z-jmD"/>
                             <constraint firstItem="DjL-1J-qQV" firstAttribute="leading" secondItem="cpb-T6-64Y" secondAttribute="leading" constant="213" id="IOr-Gg-hzm"/>
                             <constraint firstItem="dLZ-vB-zFl" firstAttribute="top" secondItem="cpb-T6-64Y" secondAttribute="top" constant="5" id="J0M-Zg-cbP"/>
-                            <constraint firstAttribute="trailing" secondItem="6jD-XP-lvM" secondAttribute="trailing" constant="324" id="Req-ON-lf0"/>
                             <constraint firstItem="6jD-XP-lvM" firstAttribute="leading" secondItem="cpb-T6-64Y" secondAttribute="leading" type="default" id="Ual-Q9-6Zo"/>
                             <constraint firstItem="vzX-jd-oMM" firstAttribute="baseline" secondItem="DjL-1J-qQV" secondAttribute="baseline" type="default" id="UdL-kM-MM1"/>
                             <constraint firstItem="opo-2F-Z1c" firstAttribute="trailing" secondItem="cpb-T6-64Y" secondAttribute="trailing" type="default" id="Vn1-L2-r93"/>
@@ -260,7 +260,6 @@
                             <constraint firstItem="DjL-1J-qQV" firstAttribute="leading" secondItem="Vne-hv-Bf7" secondAttribute="leading" type="default" id="bqt-Gb-7ka"/>
                             <constraint firstItem="vzX-jd-oMM" firstAttribute="centerX" secondItem="fkv-ob-o3A" secondAttribute="centerX" type="default" id="cCc-ff-RKQ"/>
                             <constraint firstItem="vzX-jd-oMM" firstAttribute="leading" secondItem="cpb-T6-64Y" secondAttribute="leading" constant="351" id="fPn-qr-MAh"/>
-                            <constraint firstAttribute="bottom" secondItem="6jD-XP-lvM" secondAttribute="bottom" constant="160" id="i8s-uM-yPA"/>
                             <constraint firstItem="fkv-ob-o3A" firstAttribute="top" secondItem="Vne-hv-Bf7" secondAttribute="top" type="default" id="mq5-Yu-Kte"/>
                             <constraint firstItem="opo-2F-Z1c" firstAttribute="bottom" secondItem="cpb-T6-64Y" secondAttribute="bottom" type="default" id="qTr-rc-4ms"/>
                             <constraint firstAttribute="bottom" secondItem="DjL-1J-qQV" secondAttribute="bottom" constant="136" id="r7a-zc-caL"/>
@@ -286,6 +285,19 @@
             </objects>
             <point key="canvasLocation" x="-1057" y="466"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="XZ1-ZG-bon">
+            <objects>
+                <viewController id="IaK-Mi-U31" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IEb-aM-D3C">
+                        <rect key="frame" x="0.0" y="20" width="768" height="1004"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sdA-9F-RjC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
     </scenes>
     <classes>
         <class className="DrinkGridView" superclassName="UIView">
@@ -301,9 +313,11 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/GameRootViewController.h"/>
             <relationships>
                 <relationship kind="action" name="askQuestionButtonClicked:"/>
+                <relationship kind="action" name="cancelGuessDrink:" candidateClass="UITapGestureRecognizer"/>
                 <relationship kind="outlet" name="askQuestionButton" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="drinkGridContainer" candidateClass="UIView"/>
                 <relationship kind="outlet" name="drinkGridView" candidateClass="DrinkGridView"/>
+                <relationship kind="outlet" name="fadeOutView" candidateClass="UIView"/>
                 <relationship kind="outlet" name="movesTableView" candidateClass="UITableView"/>
                 <relationship kind="outlet" name="myCocktailImageView" candidateClass="UIImageView"/>
                 <relationship kind="outlet" name="otherCocktailImageView" candidateClass="UIImageView"/>

@@ -12,23 +12,14 @@
 
 - (NSDictionary *)hostToKinveyPropertyMapping
 {
-    // Only define the dictionary once
-    static NSDictionary *mapping = nil;
-    
-    // If it's not initialized, initialize here
-    if (mapping == nil){
-        // Assign the mapping
-        mapping = @{
-        @"objectId" : KCSEntityKeyId,
-        @"player1" : @"player1",
-        @"player2" : @"player2",
-        @"cocktail1" : @"cocktail1",
-        @"cocktail2" : @"cocktail2",
-        @"winner" : @"winner",
-        };
-    }
-    
-    return mapping;
+    return @{
+    @"kinveyId" : KCSEntityKeyId,
+    @"player1" : @"player1",
+    @"player2" : @"player2",
+    @"cocktail1" : @"cocktail1",
+    @"cocktail2" : @"cocktail2",
+    @"winner" : @"winner",
+    };
 }
 
 - (BOOL)isPlayer1 {
