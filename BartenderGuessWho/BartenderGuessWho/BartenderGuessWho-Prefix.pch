@@ -12,4 +12,8 @@
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
     #import <KinveyKit/KinveyKit.h>
+
+
+#define ENABLE_KINVEY 0
+
 #endif

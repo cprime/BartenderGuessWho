@@ -112,10 +112,10 @@
                                         </constraints>
                                         <prototypes>
                                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" reuseIdentifier="GameMoveTableViewCell" rowHeight="96" id="5Jy-Mp-bBS">
-                                                <rect key="frame" x="0.0" y="22" width="325" height="96"/>
+                                                <rect key="frame" x="0.0" y="22" width="324" height="96"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                                    <rect key="frame" x="0.0" y="0.0" width="325" height="95"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="324" height="95"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jeF-bY-4Ph">
@@ -196,13 +196,11 @@
                                 </constraints>
                             </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vne-hv-Bf7">
-                                <color key="backgroundColor" red="1" green="0.94174692209999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="KgX-4l-cL2"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fkv-ob-o3A">
-                                <color key="backgroundColor" red="1" green="0.94174692209999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <imageView contentMode="scaleToFill" image="MysterDrink.png" translatesAutoresizingMaskIntoConstraints="NO" id="fkv-ob-o3A">
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="IhQ-p4-rSi"/>
                                 </constraints>
@@ -299,6 +297,9 @@
             </objects>
         </scene>
     </scenes>
+    <resources>
+        <image name="MysterDrink.png" width="150" height="150"/>
+    </resources>
     <classes>
         <class className="DrinkGridView" superclassName="UIView">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/DrinkGridView.h"/>
@@ -328,9 +329,6 @@
         </class>
         <class className="HomeViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/HomeViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="playGameButtonClicked:"/>
-            </relationships>
         </class>
         <class className="NSLayoutConstraint" superclassName="NSObject">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>

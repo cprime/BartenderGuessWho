@@ -12,8 +12,8 @@
 #import "MoveModel.h"
 #import "GameMoveTableViewCell.h"
 
-#define kGameCheckForGameTime 10
-#define kGameCheckForMoveTime 10
+#define kGameCheckForGameTime 100
+#define kGameCheckForMoveTime 100
 
 @interface GameRootViewController ()
 @property (strong, nonatomic) KCSCollection *gameCollection;
@@ -53,7 +53,9 @@
 - (void)loadOtherPlayerWithId:(NSString *)playerId {
     [KCSUserDiscovery lookupUsersForFieldsAndValues:@{ KCSEntityKeyId: playerId } completionBlock:^(NSArray *objectsOrNil, NSError *errorOrNil) {
         self.otherUser = [objectsOrNil lastObject];
-        self.otherPlayerLabel.text = [NSString stringWithFormat:@"%@ %@", [self.otherUser getValueForAttribute:@"first_name"], [self.otherUser getValueForAttribute:@"last_name"]];
+        if(self.otherUser) {
+            self.otherPlayerLabel.text = [NSString stringWithFormat:@"%@ %@", [self.otherUser getValueForAttribute:@"first_name"], [self.otherUser getValueForAttribute:@"last_name"]];
+        }
     } progressBlock:nil];
 }
 
@@ -148,31 +150,35 @@
                              [self.drinkGridView exitSelectionMode];
                          } completion:^(BOOL finished) {
                              [self.fadeOutView removeFromSuperview];
+                             self.fadeOutView.hidden = YES;
                          }];
     }
     [self.fadeOutView removeGestureRecognizer:tapGr];
 }
 
 - (void)guessOtherPlayersDrink:(UITapGestureRecognizer *)tapGr {
-    if(!self.fadeOutView) {
-        self.fadeOutView = [[UIView alloc] initWithFrame:self.view.bounds];
-        self.fadeOutView.backgroundColor = [UIColor blackColor];
-        self.fadeOutView.alpha = 0;
+    if(tapGr.state == UIGestureRecognizerStateEnded) {
+        if(!self.fadeOutView) {
+            self.fadeOutView = [[UIView alloc] initWithFrame:self.view.bounds];
+            self.fadeOutView.backgroundColor = [UIColor blackColor];
+            self.fadeOutView.alpha = 0;
+            self.fadeOutView.hidden = YES;
+        }
         
+        [self.view addSubview:self.fadeOutView];
+        [self.view bringSubviewToFront:self.drinkGridContainer];
+        
+        self.fadeOutView.hidden = NO;
+        [UIView animateWithDuration:.5
+                         animations:^{
+                             self.fadeOutView.alpha = 0.65;
+                         } completion:^(BOOL finished) {
+                             [self.drinkGridView enterSelectionMode];
+                             
+                             UITapGestureRecognizer *gr = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(cancelGuessDrink:)];
+                             [self.fadeOutView addGestureRecognizer:gr];
+                         }];
     }
-    
-    [self.view addSubview:self.fadeOutView];
-    [self.view bringSubviewToFront:self.drinkGridContainer];
-    
-    [UIView animateWithDuration:.5
-                     animations:^{
-                         self.fadeOutView.alpha = 0.65;
-                     } completion:^(BOOL finished) {
-                         [self.drinkGridView enterSelectionMode];
-                         
-                         UITapGestureRecognizer *gr = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(cancelGuessDrink:)];
-                         [self.fadeOutView addGestureRecognizer:gr];
-                     }];
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -190,9 +196,9 @@
 	// Do any additional setup after loading the view.
     
     UITapGestureRecognizer *gr = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(guessOtherPlayersDrink:)];
-    [self.view addGestureRecognizer:gr];
+    [self.otherCocktailImageView addGestureRecognizer:gr];
     
-    self.myCocktailImageView.image = [UIImage imageNamed:@"zombie-cocktail-78-small.jpeg"];//[UIImage imageNamed:self.myDrink.imageName];
+    self.myCocktailImageView.image = [UIImage imageNamed:self.myDrink.imageName];
     
     self.moveCollection = [KCSCollection collectionFromString:@"move" ofClass:[MoveModel class]];
     self.moveAppdataStore = [KCSAppdataStore storeWithCollection:self.moveCollection options:nil];
@@ -200,6 +206,7 @@
     self.gameCollection = [KCSCollection collectionFromString:@"game" ofClass:[GameModel class]];
     self.gameAppdataStore = [KCSAppdataStore storeWithCollection:self.gameCollection options:nil];
     
+    self.otherPlayerLabel.text = @"";
     if([self.game isPlayer1]) {
         self.gameState = GameStateWaitingForPlayerToJoin;
     } else {

@@ -85,7 +85,7 @@
                                                                                       kDrinkGridViewNodeHeight)];
         node.drink = drink;
         node.selected = YES;
-        node.imageView.image = [UIImage imageNamed:@"zombie-cocktail-78-small.jpeg"];//[UIImage imageNamed:drink.imageName];
+        node.imageView.image = [UIImage imageNamed:drink.imageName];
         
         [self addSubview:node];
         [self.drinkNodes addObject:node];

@@ -134,6 +134,7 @@
         self.gameModel = game;
     }
     
+#if ENABLE_KINVEY
     [self.appDataStore saveObject:self.gameModel
               withCompletionBlock:^(NSArray *objectsOrNil, NSError *errorOrNil) {
         if(errorOrNil) {
@@ -152,6 +153,18 @@
             [self.navigationController pushViewController:vc animated:YES];
         }
     } withProgressBlock:nil];
+#else
+    GameRootViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"GameRootViewController"];
+    vc.myDrink = drink;
+    vc.game = self.gameModel;
+    
+    self.gameModel.player1 = @"507994e82146606f4f000846";
+    self.gameModel.cocktail1 = drink.name;
+    self.gameModel.player2 = @"5079d5872146606f4f00091e";
+    self.gameModel.cocktail2 = drink.name;
+    
+    [self.navigationController pushViewController:vc animated:YES];
+#endif
 }
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
